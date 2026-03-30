@@ -1,0 +1,51 @@
+cust_id,full_name,email_address,phone_no,city_name,state_name,reg_date
+1,  Alice Johnson  ,alice.johnson@email.com,+1-555-0101,new york,NY,2023-01-15
+2,Bob Smith,bob.smith@email.com,5550102,  los angeles  ,CA,01/20/2023
+3,Charlie Brown,charlie.b@email.com,+1-555-0103,CHICAGO,IL,2023-02-10
+4,Diana Prince,,+1-555-0104,houston,TX,15-Mar-2023
+5,Edward Norton,edward.n@email.com,5550105,phoenix,AZ,2023/04/01
+6,Fiona Apple,fiona.apple@email.com,+1-555-0106,  PHILADELPHIA  ,PA,2023-04-18
+7,George Clooney,george.c@email.com,,san antonio,TX,05/22/2023
+8,Hannah Montana,hannah.m@email.com,+1-555-0108,san diego,CA,2023-06-01
+9,Ivan Drago,ivan.d@email.com,5550109,dallas,TX,30-Jun-2023
+10,Julia Roberts,julia.r@email.com,+1-555-0110,  san jose  ,CA,2023-07-14
+11,Kevin Hart,kevin.h@email.com,+1-555-0111,austin,TX,07/25/2023
+12,Laura Dern,,+1-555-0112,jacksonville,FL,2023-08-03
+13,Michael Scott,michael.s@email.com,5550113,  fort worth  ,tx,08/19/2023
+14,Nancy Drew,nancy.d@email.com,+1-555-0114,columbus,OH,2023-09-01
+15,Oscar Isaac,oscar.i@email.com,+1-555-0115,charlotte,NC,15-Sep-2023
+16,Patricia Arquette,patricia.a@email.com,,indianapolis,IN,2023-10-02
+17,Quincy Jones,quincy.j@email.com,+1-555-0117,san francisco,ca,10/18/2023
+18,Rachel Green,rachel.g@email.com,+1-555-0118,  SEATTLE  ,WA,2023-11-05
+19,Steve Rogers,steve.r@email.com,5550119,denver,CO,20-Nov-2023
+20,Tina Fey,tina.f@email.com,+1-555-0120,washington,DC,2023-12-01
+21,Uma Thurman,,+1-555-0121,nashville,TN,12/15/2023
+22,Victor Hugo,victor.h@email.com,+1-555-0122,  oklahoma city  ,OK,2024-01-08
+23,Wendy Williams,wendy.w@email.com,5550123,el paso,TX,01/22/2024
+24,Xavier Charles,xavier.c@email.com,+1-555-0124,boston,MA,2024-02-14
+25,Yolanda Adams,yolanda.a@email.com,+1-555-0125,portland,OR,28-Feb-2024
+26,Zachary Levi,zachary.l@email.com,,las vegas,NV,2024-03-10
+27,Amber Heard,amber.h@email.com,+1-555-0127,memphis,TN,03/25/2024
+28,  Bruce Wayne  ,bruce.w@email.com,5550128,  louisville  ,KY,2024-04-01
+29,Catherine Zeta,catherine.z@email.com,+1-555-0129,baltimore,MD,15-Apr-2024
+30,Derek Jeter,,+1-555-0130,milwaukee,WI,2024-05-08
+31,Emily Blunt,emily.b@email.com,+1-555-0131,albuquerque,NM,05/20/2024
+32,Frank Sinatra,frank.s@email.com,5550132,tucson,AZ,2024-06-03
+33,Grace Kelly,grace.k@email.com,+1-555-0133,  FRESNO  ,CA,18-Jun-2024
+34,Henry Cavill,henry.c@email.com,+1-555-0134,sacramento,CA,2024-07-01
+35,Irene Adler,irene.a@email.com,,mesa,AZ,07/15/2024
+36,James Bond,james.b@email.com,+1-555-0136,atlanta,GA,2024-08-02
+37,Kelly Clarkson,kelly.c@email.com,5550137,  kansas city  ,MO,20-Aug-2024
+38,Leonardo DiCaprio,leo.d@email.com,+1-555-0138,omaha,NE,2024-09-05
+39,Monica Bellucci,monica.b@email.com,+1-555-0139,colorado springs,CO,09/18/2024
+40,Nathan Drake,nathan.d@email.com,,raleigh,NC,2024-10-01
+41,Olivia Pope,olivia.p@email.com,+1-555-0141,  miami  ,FL,15-Oct-2024
+42,Peter Parker,peter.p@email.com,5550142,virginia beach,VA,2024-11-02
+43,Quinn Fabray,quinn.f@email.com,+1-555-0143,minneapolis,MN,11/20/2024
+44,Robert Downey,robert.d@email.com,+1-555-0144,tampa,FL,2024-12-01
+45,Sandra Bullock,,+1-555-0145,new orleans,LA,12/15/2024
+46,Thomas Edison,thomas.e@email.com,+1-555-0146,  CLEVELAND  ,OH,2025-01-08
+47,  Alice Johnson  ,alice.johnson@email.com,+1-555-0101,new york,NY,2023-01-15
+48,Vera Wang,vera.w@email.com,5550148,pittsburgh,PA,01/25/2025
+49,William Shakespeare,william.s@email.com,+1-555-0149,cincinnati,OH,2025-02-10
+50,Xena Warrior,xena.w@email.com,+1-555-0150,st. louis,MO,28-Feb-2025
