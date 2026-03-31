@@ -1,0 +1,123 @@
+# Schema Mapping Configuration
+# Defines source schema, target schema, column mappings, and transformation rules
+# for each entity type processed by the pipeline.
+
+customers:
+  source_schema:
+    - {name: "cust_id", type: "string"}
+    - {name: "full_name", type: "string"}
+    - {name: "email_address", type: "string"}
+    - {name: "phone_no", type: "string"}
+    - {name: "city_name", type: "string"}
+    - {name: "state_name", type: "string"}
+    - {name: "reg_date", type: "string"}
+
+  target_schema:
+    - {name: "customer_id", type: "integer", required: true, unique: true}
+    - {name: "name", type: "string", required: true}
+    - {name: "email", type: "string", required: false}
+    - {name: "phone", type: "string", required: false}
+    - {name: "city", type: "string", required: false}
+    - {name: "state", type: "string", required: false}
+    - {name: "registration_date", type: "date", required: false}
+
+  column_mapping:
+    cust_id: customer_id
+    full_name: name
+    email_address: email
+    phone_no: phone
+    city_name: city
+    state_name: state
+    reg_date: registration_date
+
+  transformations:
+    customer_id:
+      action: to_integer
+    name:
+      action: strip_whitespace
+    email:
+      action: lowercase
+    phone:
+      action: standardize_phone
+      format: "+1-XXX-XXXX"
+    city:
+      action: title_case
+    state:
+      action: uppercase
+    registration_date:
+      action: parse_date
+      format: auto
+
+  validation_rules:
+    customer_id:
+      - {check: "not_null"}
+      - {check: "unique"}
+      - {check: "range", min: 1, max: 999999}
+    name:
+      - {check: "not_null"}
+    email:
+      - {check: "pattern", regex: "^[\\w.+-]+@[\\w-]+\\.[\\w.]+$"}
+    registration_date:
+      - {check: "date_range", min: "2020-01-01", max: "2026-12-31"}
+
+  deduplicate_on: ["customer_id"]
+
+transactions:
+  source_schema:
+    - {name: "txn_id", type: "string"}
+    - {name: "cust_id", type: "string"}
+    - {name: "txn_amount", type: "string"}
+    - {name: "currency", type: "string"}
+    - {name: "txn_date", type: "string"}
+    - {name: "category", type: "string"}
+    - {name: "txn_status", type: "string"}
+
+  target_schema:
+    - {name: "transaction_id", type: "integer", required: true, unique: true}
+    - {name: "customer_id", type: "integer", required: true}
+    - {name: "amount", type: "float", required: true}
+    - {name: "currency", type: "string", required: false}
+    - {name: "transaction_date", type: "date", required: false}
+    - {name: "category", type: "string", required: false}
+    - {name: "status", type: "string", required: false}
+
+  column_mapping:
+    txn_id: transaction_id
+    cust_id: customer_id
+    txn_amount: amount
+    currency: currency
+    txn_date: transaction_date
+    category: category
+    txn_status: status
+
+  transformations:
+    transaction_id:
+      action: to_integer
+    customer_id:
+      action: to_integer
+    amount:
+      action: parse_currency
+      strip_chars: "$,"
+    currency:
+      action: uppercase
+    transaction_date:
+      action: parse_date
+      format: auto
+    category:
+      action: title_case
+    status:
+      action: lowercase
+
+  validation_rules:
+    transaction_id:
+      - {check: "not_null"}
+      - {check: "unique"}
+    customer_id:
+      - {check: "not_null"}
+    amount:
+      - {check: "not_null"}
+      - {check: "range", min: 0.01, max: 100000}
+    transaction_date:
+      - {check: "date_range", min: "2020-01-01", max: "2026-12-31"}
+
+  deduplicate_on: ["transaction_id"]
