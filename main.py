@@ -8,6 +8,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
 from app.utils.db import create_tables
+from app.api.routes_ingest import router as ingest_router
+from app.api.routes_pipeline import router as pipeline_router
+from app.api.routes_data import router as data_router
+from app.api.routes_validation import router as validation_router
 
 app = FastAPI(
     title=settings.app_name,
@@ -29,6 +33,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Register route modules
+app.include_router(ingest_router)
+app.include_router(pipeline_router)
+app.include_router(data_router)
+app.include_router(validation_router)
 
 
 @app.on_event("startup")
